@@ -1,4 +1,8 @@
 const path = require('path')
+const webpack = require('webpack')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+
+const extractSass = new ExtractTextPlugin('bundle.css')
 
 module.exports = {
   context: __dirname,
@@ -8,7 +12,10 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['', '.js', '.jsx', '.json']
+    alias: {
+      bs4: path.resolve(__dirname, 'node_modules/bootstrap/js/src/')
+    },
+    extensions: ['.js', '.jsx', '.json']
   },
   stats: {
     colors: true,
@@ -16,22 +23,42 @@ module.exports = {
     chunks: false
   },
   module: {
-    preLoaders: [
+    rules: [
       {
-        test: /\.jsx?$/,
-        loader: 'eslint-loader',
-        exclude: /node_modules/
-      }
-    ],
-    loaders: [
+        test: /\.jsx$/,
+        use: 'eslint-loader',
+        enforce: 'pre',
+        exclude: '/node_modules/'
+      },
       {
-        test: /\.jsx?$/,
-        loader: 'babel-loader'
+        test: /\.jsx$/,
+        use: [
+          'babel-loader'
+        ]
       },
       {
         test: /\.json$/,
-        loader: 'json-loader'
+        use: 'json-loader'
+      },
+      {
+        test: [
+          /\.css$/,
+          /\.scss$/],
+        use: extractSass.extract({
+          use: [{
+            loader: 'css-loader'
+          }, {
+            loader: 'sass-loader'
+          }],
+          fallback: 'style-loader'
+        })
       }
     ]
-  }
+  },
+  plugins: [
+    extractSass,
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    })]
 }

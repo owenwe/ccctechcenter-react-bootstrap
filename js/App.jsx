@@ -1,9 +1,10 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
-const {hashHistory, IndexRoute, Router, Route, Provider} = require('react-router')
+const {hashHistory, IndexRoute, Router, Route} = require('react-router')
 const Layout = require('./Layout')
 const Landing = require('./Landing')
-const { store } = require('./Store')
+// const { store } = require('./Store')
+import '../stylesheets/index.scss'
 
 const App = React.createClass({
   render () {

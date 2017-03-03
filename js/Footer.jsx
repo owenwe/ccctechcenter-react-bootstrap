@@ -1,9 +1,9 @@
 const React = require('react')
 
 const Footer = () => (
-  <footer className='footer navbar-fixed-bottom'>
-    <div className='container-fluid'>
-      <p>Footer Branding Here</p>
+  <footer>
+    <div className='container-fluid bg-faded'>
+      <p className='lead'>Footer Branding Here</p>
     </div>
   </footer>
 )

@@ -5,9 +5,9 @@ const Footer = require('./Footer')
 const Layout = (props) => (
   <div className='app-container'>
     <Header />
-      <div className='container'>
-        {props.children}
-      </div>
+    <div className='container-fluid'>
+      {props.children}
+    </div>
     <Footer />
   </div>
 )

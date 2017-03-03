@@ -1,7 +1,6 @@
 const redux = require('redux')
 const reactRedux = require('react-redux')
 
-
 const SET_CURRENT_TERM = 'currentTerm'
 const initialState = {
   currentTerm: ''

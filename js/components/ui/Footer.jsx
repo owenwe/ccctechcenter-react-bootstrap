@@ -1,4 +1,4 @@
-const React = require('react')
+import React from 'react'
 
 const Footer = () => (
   <footer>
@@ -8,4 +8,4 @@ const Footer = () => (
   </footer>
 )
 
-module.exports = Footer
+export default Footer

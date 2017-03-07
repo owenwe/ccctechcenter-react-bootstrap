@@ -1,21 +1,32 @@
-const React = require('react')
-const ReactDOM = require('react-dom')
-const {hashHistory, IndexRoute, Router, Route} = require('react-router')
-const Layout = require('./Layout')
-const Landing = require('./Landing')
-// const { store } = require('./Store')
-import '../stylesheets/index.scss'
+import React from 'react'
+import { render } from 'react-dom'
+import routes from './routes'
+import storeFactory from './store'
+import { Provider } from 'react-redux'
+import { searchByTermCode } from './actions/terms'
+import defaultState from './initialState'
 
-const App = React.createClass({
-  render () {
-    return (
-      <Router history={hashHistory}>
-        <Route path='/' component={Layout}>
-          <IndexRoute component={Landing} />
-        </Route>
-      </Router>
-    )
-  }
-})
+const initialState = (window.localStorage['redux-store'])
+  ? JSON.parse(window.localStorage['redux-store'])
+  : defaultState
 
-ReactDOM.render(<App />, document.getElementById('app'))
+const saveState = () => {
+  window.localStorage['redux-store'] = JSON.stringify(store.getState())
+}
+
+const store = storeFactory(initialState)
+store.subscribe(saveState)
+
+store.dispatch(
+  searchByTermCode('sp2016')
+)
+
+window.React = React
+window.store = store
+
+render(
+  <Provider store={store}>
+    {routes}
+  </Provider>,
+  document.getElementById('app')
+)

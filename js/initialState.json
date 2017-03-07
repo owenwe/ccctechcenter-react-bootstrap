@@ -1,0 +1,39 @@
+{
+  "terms": {
+    "fetching": false,
+    "suggestions":[
+      {
+        "archived": false,
+        "dateClose": 1420139222389,
+        "dateEnd": 1420070400000,
+        "dateOpen": 1301616000000,
+        "dateStart": 1312156800000,
+        "description": "Fall 2011 - San Diego City College",
+        "id": 233,
+        "termCode": "07111",
+        "created": 0,
+        "createdBy": "",
+        "lastModified": 0,
+        "updatedBy": "",
+        "college": {}
+      },
+      {
+        "archived": false,
+        "dateClose": 1420139222389,
+        "dateEnd": 1420070400000,
+        "dateOpen": 1301616000000,
+        "dateStart": 1312156800000,
+        "description": "Fall 2011 - San Diego Mesa College",
+        "id": 235,
+        "termCode": "07211",
+        "created": 0,
+        "createdBy": "",
+        "lastModified": 0,
+        "updatedBy": "",
+        "college": {}
+      }
+    ]
+  },
+  "goal": 10,
+  "messages": []
+}

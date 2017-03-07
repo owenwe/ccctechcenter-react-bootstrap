@@ -1,5 +1,5 @@
-const React = require('react')
-const { Link } = require('react-router')
+import React from 'react'
+import { Link } from 'react-router'
 require('bs4/dropdown.js')
 require('bs4/button.js')
 require('bs4/collapse.js')
@@ -7,7 +7,7 @@ require('bs4/collapse.js')
 const Header = React.createClass({
   render () {
     return (
-      <header className='header'>
+      <header className='header mb-1'>
         <nav className='navbar navbar-toggleable-md navbar-inverse bg-primary'>
           <button className='navbar-toggler navbartoggler-right'
             type='button' role='button'
@@ -20,11 +20,11 @@ const Header = React.createClass({
               Some Branding Here</Link>
           <div className='collapse navbar-collapse' id='navbarSupportedContent'>
             <ul className='navbar-nav mr-auto mt-2 mt-md-0'>
-              <li className='nav-item active'>
-                <Link className='nav-link' activeClassName='active' to='/'>Home <span className='sr-only'>(current)</span></Link>
+              <li className='nav-item'>
+                <Link className='nav-link'activeClassName='active' to='/actions'>Actions</Link>
               </li>
               <li className='nav-item'>
-                <Link className='nav-link' to='/'>Link</Link>
+                <Link className='nav-link' activeClassName='active' to='/terms'>Terms</Link>
               </li>
               <li className='nav-item'>
                 <Link className='nav-link disabled' to='/'>Link disabled</Link>
@@ -51,4 +51,4 @@ const Header = React.createClass({
   }
 })
 
-module.exports = Header
+export default Header

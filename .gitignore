@@ -1,4 +1,7 @@
 public/*bundle.js
+public/*bundle.css
+public/*normalize.css
+public/*.jsx
 node_modules/
 .eslintcache
 coverage
@@ -7,4 +10,4 @@ coverage
 .sass-cache/
 _site/
 npm-debug.log
-
+.idea

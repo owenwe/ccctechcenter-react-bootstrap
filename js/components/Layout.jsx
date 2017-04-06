@@ -1,6 +1,6 @@
-import Header from './ui/Header'
+import Header from './containers/Header'
 import Messages from './containers/Messages'
-import Footer from './ui/Footer'
+import Footer from './containers/Footer'
 import '../../stylesheets/index.scss'
 
 export const Layout = ({children}) =>

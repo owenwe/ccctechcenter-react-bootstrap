@@ -1,5 +1,4 @@
 import React from 'react'
-import { PropTypes } from 'react'
 
 class Actions extends React.Component {
   constructor(props) {

@@ -1,39 +1,342 @@
 {
-  "terms": {
-    "fetching": false,
-    "suggestions":[
-      {
-        "archived": false,
-        "dateClose": 1420139222389,
-        "dateEnd": 1420070400000,
-        "dateOpen": 1301616000000,
-        "dateStart": 1312156800000,
-        "description": "Fall 2011 - San Diego City College",
-        "id": 233,
-        "termCode": "07111",
-        "created": 0,
-        "createdBy": "",
-        "lastModified": 0,
-        "updatedBy": "",
-        "college": {}
-      },
-      {
-        "archived": false,
-        "dateClose": 1420139222389,
-        "dateEnd": 1420070400000,
-        "dateOpen": 1301616000000,
-        "dateStart": 1312156800000,
-        "description": "Fall 2011 - San Diego Mesa College",
-        "id": 235,
-        "termCode": "07211",
-        "created": 0,
-        "createdBy": "",
-        "lastModified": 0,
-        "updatedBy": "",
-        "college": {}
-      }
-    ]
+  "timezone": "",
+  "languages": [],
+  "countries": [],
+  "states": [
+    {"name":"Alabama","fips":"01","usps":"AL"},
+    {"name":"Alaska","fips":"02","usps":"AK"},
+    {"name":"Arizona","fips":"04","usps":"AZ"},
+    {"name":"Arkansas","fips":"05","usps":"AR"},
+    {"name":"California","fips":"06","usps":"CA"},
+    {"name":"Colorado","fips":"08","usps":"CO"},
+    {"name":"Connecticut","fips":"09","usps":"CT"},
+    {"name":"Delaware","fips":"10","usps":"DE"},
+    {"name":"District of Columbia","fips":"11","usps":"DC"},
+    {"name":"Florida","fips":"12","usps":"FL"},
+    {"name":"Georgia","fips":"13","usps":"GA"},
+    {"name":"Hawaii","fips":"15","usps":"HI"},
+    {"name":"Idaho","fips":"16","usps":"ID"},
+    {"name":"Illinois","fips":"17","usps":"IL"},
+    {"name":"Indiana","fips":"18","usps":"IN"},
+    {"name":"Iowa","fips":"19","usps":"IA"},
+    {"name":"Kansas","fips":"20","usps":"KS"},
+    {"name":"Kentucky","fips":"21","usps":"KY"},
+    {"name":"Louisiana","fips":"22","usps":"LA"},
+    {"name":"Maine","fips":"23","usps":"ME"},
+    {"name":"Maryland","fips":"24","usps":"MD"},
+    {"name":"Massachusetts","fips":"25","usps":"MA"},
+    {"name":"Michigan","fips":"26","usps":"MI"},
+    {"name":"Minnesota","fips":"27","usps":"MN"},
+    {"name":"Mississippi","fips":"28","usps":"MS"},
+    {"name":"Missouri","fips":"29","usps":"MO"},
+    {"name":"Montana","fips":"30","usps":"MT"},
+    {"name":"Nebraska","fips":"31","usps":"NE"},
+    {"name":"Nevada","fips":"32","usps":"NV"},
+    {"name":"New Hampshire","fips":"33","usps":"NH"},
+    {"name":"New Jersey","fips":"34","usps":"NJ"},
+    {"name":"New Mexico","fips":"35","usps":"NM"},
+    {"name":"New York","fips":"36","usps":"NY"},
+    {"name":"North Carolina","fips":"37","usps":"NC"},
+    {"name":"North Dakota","fips":"38","usps":"ND"},
+    {"name":"Ohio","fips":"39","usps":"OH"},
+    {"name":"Oklahoma","fips":"40","usps":"OK"},
+    {"name":"Oregon","fips":"41","usps":"OR"},
+    {"name":"Pennsylvania","fips":"42","usps":"PA"},
+    {"name":"Rhode Island","fips":"44","usps":"RI"},
+    {"name":"South Carolina","fips":"45","usps":"SC"},
+    {"name":"South Dakota","fips":"46","usps":"SD"},
+    {"name":"Tennessee","fips":"47","usps":"TN"},
+    {"name":"Texas","fips":"48","usps":"TX"},
+    {"name":"Utah","fips":"49","usps":"UT"},
+    {"name":"Vermont","fips":"50","usps":"VT"},
+    {"name":"Virginia","fips":"51","usps":"VA"},
+    {"name":"Washington","fips":"53","usps":"WA"},
+    {"name":"West Virginia","fips":"54","usps":"WV"},
+    {"name":"Wisconsin","fips":"55","usps":"WI"},
+    {"name":"Wyoming","fips":"56","usps":"WY"},
+    {"name":"American Samoa","fips":"60","usps":"AS"},
+    {"name":"Federated States of Micronesia","fips":"64","usps":"FM"},
+    {"name":"Guam","fips":"66","usps":"GU"},
+    {"name":"Marshall Islands","fips":"68","usps":"MH"},
+    {"name":"Commonwealth of the Northern Mariana Islands","fips":"69","usps":"MP"},
+    {"name":"Palau","fips":"70","usps":"PW"},
+    {"name":"Puerto Rico","fips":"72","usps":"PR"},
+    {"name":"U.S. Minor Outlying Islands","fips":"74","usps":"UM"},
+    {"name":"U.S. Virgin Islands","fips":"78","usps":"VI"}
+  ],
+  "awardTypes": [
+    {"name": "AA degree", "value":"1"},
+    {"name": "AS degree", "value":"2"},
+    {"name": "Certificate", "value":"3"},
+    {"name": "Other", "value":"4"},
+    {"name": "AA-T degree", "value":"5"},
+    {"name": "AS-T degree", "value":"6"}
+  ],
+  "educationalGoals": [
+    {"name": "A - Obtain an associate degree and transfer to a 4-year institution", "value":"A"},
+    {"name": "B - Transfer to a 4-year institution without an associate degree", "value":"B"},
+    {"name": "C - Obtain a 2-year associate degree without transfer", "value":"C"},
+    {"name": "E - Earn a career technical certificate without transfer", "value":"E"},
+    {"name": "F - Discover/Formulate career interests, plans, goals", "value":"F"},
+    {"name": "G - Prepare for a new career (acquire job skills)", "value":"G"},
+    {"name": "H - Advance in current job/career (update job skills)", "value":"H"},
+    {"name": "I - Maintain certificate or license", "value":"I"},
+    {"name": "J - Educational development", "value":"J"},
+    {"name": "K - Improve basic skills", "value":"K"},
+    {"name": "L - Complete credits for high school diploma or GED", "value":"L"},
+    {"name": "M - Undecided on goal", "value":"M"},
+    {"name": "N - To move from noncredit coursework to credit coursework", "value":"N"},
+    {"name": "O - 4 year college student taking courses to meet 4 year college requirements", "value":"O"}
+  ],
+  "user":{
+    "role": "user"
   },
-  "goal": 10,
-  "messages": []
+  "collegeId": "",
+  "messages": [],
+  "cccapply": {
+    "districts": {
+      "fetching": false,
+      "suggestions": [],
+      "config": {
+        "datatable": {
+          "table": {
+            "width": 1000,
+            "maxHeight": 400,
+            "rowHeight": 30,
+            "headerHeight": 45,
+            "groupHeaderHeight": 45,
+            "isColumnResizing": false,
+            "rowClassName": "ccctc-datatable-row"
+          },
+          "columns": {
+            "id": {
+              "columnKey": "id",
+              "width": 75,
+              "align": "center",
+              "isResizable": false,
+              "fixed": true
+            },
+            "name": {
+              "columnKey": "name",
+              "width": 225,
+              "minWidth": 225,
+              "maxWidth": 400,
+              "align": "center",
+              "isResizable": true,
+              "flexGrow": 2,
+              "fixed": true
+            },
+            "city": {
+              "columnKey": "city",
+              "width": 150,
+              "align": "center",
+              "isResizable": false,
+              "fixed": false
+            },
+            "url": {
+              "columnKey": "url",
+              "width": 200,
+              "align": "center",
+              "isResizable": false,
+              "fixed": false
+            },
+            "multipleApps": {
+              "columnKey": "multipleApps",
+              "width": 100,
+              "align": "center",
+              "isResizable": false,
+              "fixed": false
+            },
+            "lastModified": {
+              "columnKey": "lastModified",
+              "width": 150,
+              "align": "center",
+              "isResizable": false,
+              "fixed": false
+            }
+          }
+        }
+      },
+      "search": {
+        "content": [],
+        "sort": [
+          {
+            "property": "id",
+            "direction": "ASC",
+            "ascending": true,
+            "descending": false
+          }
+        ],
+        "sortIndexes": []
+      }
+    },
+    "colleges": {
+      "fetching": false,
+      "suggestions": [],
+      "config": {
+        "datatable": {
+          "table": {
+            "width": 1000,
+            "maxHeight": 400,
+            "rowHeight": 30,
+            "headerHeight": 45,
+            "groupHeaderHeight": 45,
+            "isColumnResizing": false,
+            "rowClassName": "ccctc-datatable-row"
+          },
+          "columns": {
+            "id": {
+              "columnKey": "id",
+              "width": 75,
+              "align": "center",
+              "isResizable": false,
+              "fixed": true
+            },
+            "name": {
+              "columnKey": "name",
+              "width": 225,
+              "minWidth": 225,
+              "maxWidth": 400,
+              "align": "center",
+              "isResizable": true,
+              "flexGrow": 2,
+              "fixed": true
+            },
+            "district": {
+              "columnKey": "district",
+              "width": 150,
+              "align": "center",
+              "isResizable": false,
+              "fixed": false
+            },
+            "city": {
+              "columnKey": "city",
+              "width": 150,
+              "align": "center",
+              "isResizable": false,
+              "fixed": false
+            },
+            "goLiveDate": {
+              "columnKey": "goLiveDate",
+              "width": 150,
+              "align": "center",
+              "isResizable": false,
+              "fixed": false
+            },
+            "lastModified": {
+              "columnKey": "lastModified",
+              "width": 150,
+              "align": "center",
+              "isResizable": false,
+              "fixed": false
+            }
+          }
+        }
+      },
+      "search": {
+        "content": [],
+        "sort": [
+          {
+            "property": "id",
+            "direction": "ASC",
+            "ascending": true,
+            "descending": false
+          }
+        ],
+        "sortIndexes": []
+      }
+    },
+    "terms": {
+      "college": "",
+      "fetching": false,
+      "suggestions": [],
+      "config": {
+        "datatable": {
+          "table": {
+            "width": 1000,
+            "maxHeight": 400,
+            "rowHeight": 30,
+            "headerHeight": 45,
+            "groupHeaderHeight": 45,
+            "isColumnResizing": false,
+            "rowClassName": "ccctc-datatable-row"
+          },
+          "columns": {
+            "id": {
+              "columnKey": "id",
+              "width": 50,
+              "align": "center",
+              "isResizable": false,
+              "fixed": true
+            },
+            "termCode": {
+              "columnKey": "termCode",
+              "width": 150,
+              "align": "center",
+              "isResizable": false,
+              "fixed": true
+            },
+            "description": {
+              "columnKey": "description",
+              "width": 225,
+              "minWidth": 225,
+              "maxWidth": 400,
+              "align": "center",
+              "isResizable": true,
+              "flexGrow": 2,
+              "fixed": false
+            },
+            "dateStart": {
+              "columnKey": "dateStart",
+              "width": 150,
+              "align": "center",
+              "isResizable": false,
+              "fixed": false
+            },
+            "dateEnd": {
+              "columnKey": "dateEnd",
+              "width": 150,
+              "align": "center",
+              "isResizable": false,
+              "fixed": false
+            },
+            "dateOpen": {
+              "columnKey": "dateOpen",
+              "width": 150,
+              "align": "center",
+              "isResizable": false,
+              "fixed": false
+            },
+            "dateClose": {
+              "columnKey": "dateClose",
+              "width": 150,
+              "align": "center",
+              "isResizable": false,
+              "fixed": false
+            }
+          }
+        }
+      },
+      "search": {
+        "content": [],
+        "first": true,
+        "last": true,
+        "number": 0,
+        "numberOfElements": 2,
+        "size": 10,
+        "sort": [
+          {
+            "property": "termCode",
+            "direction": "ASC",
+            "ignoreCase": false,
+            "ascending": true,
+            "descending": false,
+            "nullHandling": "NATIVE"
+          }
+        ],
+        "totalElements": 2,
+        "totalPages": 1
+      }
+    }
+  }
 }

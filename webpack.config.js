@@ -30,14 +30,21 @@ module.exports = {
           {loader: 'eslint-loader'}
         ],
         enforce: 'pre',
-        exclude: '/node_modules/'
+        exclude: '/node_modules/',
+        include: [
+          path.resolve(__dirname, 'node_modules/lodash'),
+          path.resolve(__dirname, 'node_modules/moment-timezone')
+        ]
       },
       {
         test: [
-          /\.jsx$/],
+          /\.js$/,
+          /\.jsx$/
+        ],
         use: [
           {loader: 'babel-loader'}
-        ]
+        ],
+        exclude: '/node_modules/'
       },
       {
         test: /\.json$/,
@@ -48,11 +55,10 @@ module.exports = {
           /\.css$/,
           /\.scss$/],
         use: extractSass.extract({
-          use: [{
-            loader: 'css-loader'
-          }, {
-            loader: 'sass-loader'
-          }],
+          use: [
+            {loader: 'css-loader'},
+            {loader: 'sass-loader'}
+          ],
           fallback: 'style-loader'
         })
       }
@@ -61,7 +67,9 @@ module.exports = {
   plugins: [
     extractSass,
     new webpack.ProvidePlugin({
+      _: 'lodash',
       $: 'jquery',
-      jQuery: 'jquery'
+      jQuery: 'jquery',
+      moment: 'moment-timezone'
     })]
 }

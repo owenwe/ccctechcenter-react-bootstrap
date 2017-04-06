@@ -1,18 +1,6 @@
 import C from '../../constants'
 import { combineReducers } from 'redux'
 
-export const term = (state = null, action) =>
-  action.type === C.ADD_TERM ? action.payload : state
-
-export const college = (state = null, action) =>
-  action.type === C.TERMS_SET_COLLEGE ? action.payload : state
-
-/**
- *
- * @param state object representing terms.config.datatable
- * @param action type = (DATATABLE_COLUMN_RESIZE, ), payload = {}
- * @returns {{}}
- */
 export const datatable = (state = {}, action) => {
   switch (action.type) {
     case C.DT_COLUMN_RESIZE:
@@ -22,7 +10,8 @@ export const datatable = (state = {}, action) => {
           ...state.columns,
           [action.payload.column]: {
             ...state.columns[action.payload.column],
-            width: action.payload.width}
+            width: action.payload.width
+          }
         }
       }
     default:
@@ -32,13 +21,13 @@ export const datatable = (state = {}, action) => {
 
 export const fetching = (state = false, action) => {
   switch (action.type) {
-    case C.FETCH_TERMS:
+    case C.FETCH_COLLEGES:
       return true
     case C.CANCEL_FETCHING:
       return false
     case C.CHANGE_SUGGESTIONS:
       return false
-    case C.UPDATE_TERMS_SEARCH_RESULTS:
+    case C.UPDATE_COLLEGES_POPULATION:
       return false
     default:
       return state
@@ -56,36 +45,38 @@ export const suggestions = (state = [], action) => {
   }
 }
 
-// TODO: C.SEARCH_TERMS, C.UPDATE_TERM
 export const search = (state = {}, action) => {
   switch (action.type) {
-    case C.ADD_TERM:
-      const exists = state['content'].some(term => term.id === action.payload.id)
-      return (exists)
-        ? state
-        : {
-          ...state,
-          'content': [
-            ...state['content'],
-            term(null, action)
-          ]
-        }
-    case C.ARCHIVE_TERM:
-      return state.content.filter(term => term.id !== action.payload)
     case C.CLEAR_SEARCH_RESULTS:
       return {
         ...state,
         content: [],
-        first: true,
-        last: true,
-        number: 0,
-        numberOfElements: 0,
-        totalElements: 0,
-        totalPages: 0
+        sort: [
+          {
+            "property": "id",
+            "direction": "ASC",
+            "ascending": true,
+            "descending": false
+          }
+        ],
+        sortIndexes: []
       }
-    case C.UPDATE_TERMS_SEARCH_RESULTS:
-      console.log(action)
-      return action.payload
+    case C.UPDATE_COLLEGES_POPULATION:
+      let sortIndexes = []
+      action.payload.forEach((c,i) => {
+        sortIndexes.push(i)
+      })
+      return {
+        ...state,
+        content: action.payload,
+        sortIndexes: sortIndexes
+      }
+    case C.COLLEGES_SORT_CHANGE:
+      return {
+        ...state,
+        sort: action.payload.newSort,
+        sortIndexes: action.payload.newIndexes
+      }
     default:
       return state
   }
@@ -95,7 +86,6 @@ export default combineReducers({
   config: combineReducers({
     datatable
   }),
-  college,
   search,
   fetching,
   suggestions
